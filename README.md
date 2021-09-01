@@ -1,0 +1,267 @@
+# PhonePe Pulse - Data #
+A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the [PhonePe Pulse](https://www.phonepe.com/pulse/) website.
+
+## Table of Contents ##
+
+<!-- TOC -->
+
+- [PhonePe Pulse - Data](#phonepe-pulse---data)
+    - [Table of Contents](#table-of-contents)
+    - [Goal](#goal)
+    - [Guide](#guide)
+    - [Documentation](#documentation)
+        - [Folder Structure](#folder-structure)
+        - [JSON Structure / Syntax](#json-structure--syntax)
+            - [Aggregated](#aggregated)
+                - [<u>data/aggregated/transaction/country/india/2018/1.json</u>](#udataaggregatedtransactioncountryindia20181jsonu)
+                - [<u>data/aggregated/user/country/india/2021/1.json</u>](#udataaggregatedusercountryindia20211jsonu)
+            - [Top](#top)
+                - [<u>data/top/transaction/country/india/2021/1.json</u>](#udatatoptransactioncountryindia20211jsonu)
+                - [<u>data/top/user/country/india/2021/1.json</u>](#udatatopusercountryindia20211jsonu)
+    - [FAQs](#faqs)
+    - [LICENSE](#license)
+
+<!-- /TOC -->
+
+## Goal ##
+Our goal is to share this data with everyone (license below), so that you can build your own understanding, insights and visualization on how digital payments have evolved over the years in India.
+## Guide ##
+This [data](https://github.com/PhonePe/pulse-data/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of [PhonePe Pulse - Explore tab](https://www.phonepe.com/pulse/explore/).
+1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
+1. **Top** - Totals of top States / Districts /Pin Codes
+
+All the data is provided in these folders is of JSON format. For more details on the structure/syntax you can refer to [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax) section of the documentation.
+
+## Documentation ##
+### Folder Structure ###
+
+Head to the [data](https://github.com/PhonePe/pulse-data/tree/main/data) folder to find below shown structure. Overall, above mentioned two sections data can be found at top level folder structure.
+
+Under each of these sections there are folders for **Transactions** and **Users** respectively.
+
+Data for **Transactions** and **Users** is grouped under country level within **India** folder which further grouped the data into each year(_for country level data_) and there is one folder with name **state** which groups data for all the available states of India respectively. 
+
+Similar to country level data, state level data too grouped into each year. All of these year folders(_both at country and state level_) have maximum of four files with names starting from 1 to 4. These numbers represent each quarter in the selected year. 
+
+<ins>Example</ins>: ```2021 > 1.json``` represents data for quarter 1 (_Jan, Feb and Mar 2021_)
+
+For details on syntax of each of these files, refer to [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax).
+
+```
+data
+|___ aggregated
+    |___ transactions
+        |___ country
+            |___ india
+                |___ 2018
+                |    1.json
+                |    2.json
+                |    3.json
+                |    4.json
+                
+                |___ 2019
+                |    ...
+                |___ 2019
+                |___ state 
+                    |___ andaman-&-nicobar-islands
+                        |___2018
+                        |   1.json
+                        |   2.json
+                        |   3.json
+                        |   4.json
+
+                    |___ andhra-pradesh
+                    |    ...
+                    |    ...
+```
+
+### JSON Structure / Syntax ###
+
+#### 1. Aggregated ####
+##### 1.1 <u>data/aggregated/transaction/country/india/2018/1.json</u> #####
+Transaction data broken down by type of payment at country level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. Ex: <u>data/aggregated/transaction/country/india/state/delhi/2018/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only
+    "code": "SUCCESS", //Ignore. For internal use only
+    "data": {
+        "from": 1514745000000, //Data duration
+        "to": 1522175400000,
+        "transactionData": [
+            {
+                "name": "Recharge & bill payments", //Type of payment category
+                "paymentInstruments": [
+                    {
+                        "type": "TOTAL",
+                        "count": 72550406, //Total number of transactions for the above payment category
+                        "amount": 1.4472713558652578E10 //Total value
+                    }
+                ]
+            },
+            
+            ...,
+
+            ...,
+                        
+            {
+                "name": "Others",
+                "paymentInstruments": [
+                    {
+                        "type": "TOTAL",
+                        "count": 5761576,
+                        "amount": 4.643217301269438E9
+                    }
+                ]
+            }
+        ]
+    },
+    "responseTimestamp": 1630346628866 //Ignore. For internal use only.
+}
+```
+
+##### 1.2 <u>data/aggregated/user/country/india/2021/1.json</u> #####
+Users data broken down by devices at country level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. Ex: <u>data/aggregated/user/country/india/state/delhi/2021/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "aggregated": {
+            "registeredUsers": 284985430, //Total number of registered users for the selected quarter.
+            "appOpens": 8635508502 //Number of app opens by users for the selected quarter
+        },
+        "usersByDevice": [ //Users by individual device
+            {
+                "brand": "Xiaomi", //Brand name of the device
+                "count": 71553154, //Number of registered users by this brand.
+                "percentage": 0.2510765339828075 //Percentage of share of current device type compared to all devices.
+            },
+            
+            ...,
+
+            ...,
+
+            {
+                "brand": "Others", //All unrecognized device types grouped here. 
+                "count": 23564639, //Number of registered users by all unrecognized device types.
+                "percentage": 0.08268717105993804 //Percentage of share of all unrecognized device types compared to overall devices that users are registered with.
+            }
+        ]
+    },
+    "responseTimestamp": 1630346630074 //Ignore. For internal use only.
+}
+```
+#### 2. Top ####
+##### 2.1 <u>data/top/transaction/country/india/2021/1.json</u> #####
+Top 10 states / districts / pin codes where most number of the transactions are done for a selected year-quarter combination.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. The only exception is, it won't have data for states. Ex: <u>data/top/transaction/country/india/state/delhi/2021/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "states": [ //List of states where most number of transactions happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "karnataka", // State name
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 523797492, //Total number of transactions
+                    "amount": 7.549953574123948E11 //Total value of all transactions
+                }
+            },
+            
+            ...,
+        ],
+        "districts": [ //List of districts where most number of transactions happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "bengaluru urban", //District name
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 348712787, //Total number of transactions
+                    "amount": 4.324013412317671E11 //Total value of all transactions
+                }
+            },
+            
+            ...,
+        ],
+        "pincodes": [ //List of pin codes where most number of transactions happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "560001", //Pin code
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 111898471, //Total number of transactions
+                    "amount": 1.5427512629157785E11 //Total value of all transactions
+                }
+            },
+            
+            ...,
+        ]
+    },
+    "responseTimestamp": 1630346629360 //Ignore. For internal use only.
+}
+```
+
+##### 2.2 <u>data/top/user/country/india/2021/1.json</u> #####
+Top 10 states / districts / pin codes where most number of users registered from, for a selected year-quarter combination.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. The only exception is, it won't have data for states. Ex: <u>data/top/user/country/india/state/delhi/2021/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "states": [ //List of states where most number of users registered from, for a selected year-quarter combination.
+            {
+                "name": "maharashtra", //State name
+                "registeredUsers": 37077537 //Number of registered users
+            },
+            
+            ...,
+        ],
+        "districts": [ //List of districts where most number of users registered from, for a selected year-quarter combination.
+            {
+                "name": "bengaluru urban", //State name
+                "registeredUsers": 9955387 //Number of registered users
+            },
+            
+            ...,
+        ],
+        "pincodes": [ //List of pin codes where most number of users registered from, for a selected year-quarter combination.
+            {
+                "name": "201301", //Pin code
+                "registeredUsers": 541127 //Number of registered users
+            },
+            
+            ...,
+        ]
+    },
+    "responseTimestamp": 1630346630074 //Ignore. For internal use only.
+}
+```
+
+## FAQs ##
+1. ```How frequently data gets updated?```
+<br/><u>A:</u> The frequency is once in three months.
+2. ```How to report a bug or raise a query?```
+<br/><u>A:</u> Use GitHub issues to [raise a query](https://github.com/PhonePe/pulse-data/issues/new). 
+
+## LICENSE ##
+
+[Community Data License Agreement – Permissive – Version 2.0](https://github.com/PhonePe/pulse-data/blob/main/LICENSE)
