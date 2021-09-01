@@ -26,7 +26,7 @@ A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) 
 ## Goal ##
 Our goal is to share this data with everyone (license below), so that you can build your own understanding, insights and visualization on how digital payments have evolved over the years in India.
 ## Guide ##
-This [data](https://github.com/PhonePe/pulse-data/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of [PhonePe Pulse - Explore tab](https://www.phonepe.com/pulse/explore/).
+This [data](https://github.com/PhonePe/pulse-data/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
 1. **Top** - Totals of top States / Districts /Pin Codes
 
