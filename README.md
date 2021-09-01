@@ -1,5 +1,5 @@
 # PhonePe Pulse - Data #
-A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the [PhonePe Pulse](https://www.phonepe.com/pulse/) website.
+A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the PhonePe Pulse website.
 
 ## Table of Contents ##
 
