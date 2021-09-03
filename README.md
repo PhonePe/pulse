@@ -260,7 +260,7 @@ For complete details on syntax find the comments in below code
 1. ```How frequently data gets updated?```
 <br/><u>A:</u> The frequency is once in three months.
 2. ```How to report a bug or raise a query?```
-<br/><u>A:</u> Use GitHub issues to [raise a query](https://github.com/PhonePe/pulse-data/issues/new). 
+<br/><u>A:</u> Use GitHub issues to [raise a query](https://github.com/PhonePe/pulse/issues/new). 
 
 ## LICENSE ##
 
