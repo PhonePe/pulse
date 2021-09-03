@@ -1,5 +1,5 @@
 # PhonePe Pulse - Data #
-A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the [PhonePe Pulse](https://www.phonepe.com/pulse/) website.
+A home for the [**data**](https://github.com/PhonePe/pulse/tree/main/data) that powers the [PhonePe Pulse](https://www.phonepe.com/pulse/) website.
 
 ## Table of Contents ##
 
@@ -26,16 +26,16 @@ A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) 
 ## Goal ##
 Our goal is to share this data with everyone (license below), so that you can build your own understanding, insights and visualization on how digital payments have evolved over the years in India.
 ## Guide ##
-This [data](https://github.com/PhonePe/pulse-data/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
+This [data](https://github.com/PhonePe/pulse/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
 1. **Top** - Totals of top States / Districts /Pin Codes
 
-All the data provided in these folders is of JSON format. For more details on the structure/syntax you can refer to the [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax) section of the documentation.
+All the data provided in these folders is of JSON format. For more details on the structure/syntax you can refer to the [JSON Structure / Syntax](https://github.com/PhonePe/pulse#json-structure--syntax) section of the documentation.
 
 ## Documentation ##
 ### Folder Structure ###
 
-Head to the [data](https://github.com/PhonePe/pulse-data/tree/main/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
+Head to the [data](https://github.com/PhonePe/pulse/tree/main/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
 
 Under each of these sections there are folders for **Transactions** and **Users** respectively.
 
@@ -45,7 +45,7 @@ Similar to country level data, state level data too grouped into each year. All 
 
 <ins>Example</ins>: ```2021 > 1.json``` represents data for quarter 1 (_Jan, Feb and Mar 2021_)
 
-For details on syntax of each of these files, refer to [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax).
+For details on syntax of each of these files, refer to [JSON Structure / Syntax](https://github.com/PhonePe/pulse#json-structure--syntax).
 
 ```
 data
@@ -264,4 +264,4 @@ For complete details on syntax find the comments in below code
 
 ## LICENSE ##
 
-[Community Data License Agreement – Permissive – Version 2.0](https://github.com/PhonePe/pulse-data/blob/main/LICENSE)
+[Community Data License Agreement – Permissive – Version 2.0](https://github.com/PhonePe/pulse/blob/main/LICENSE)
