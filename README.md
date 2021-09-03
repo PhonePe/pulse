@@ -1,5 +1,5 @@
 # PhonePe Pulse - Data #
-A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the PhonePe Pulse website.
+A home for the [**data**](https://github.com/PhonePe/pulse-data/tree/main/data) that powers the [PhonePe Pulse](https://www.phonepe.com/pulse/) website.
 
 ## Table of Contents ##
 
@@ -30,18 +30,18 @@ This [data](https://github.com/PhonePe/pulse-data/tree/main/data) has been struc
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
 1. **Top** - Totals of top States / Districts /Pin Codes
 
-All the data is provided in these folders is of JSON format. For more details on the structure/syntax you can refer to [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax) section of the documentation.
+All the data provided in these folders is of JSON format. For more details on the structure/syntax you can refer to the [JSON Structure / Syntax](https://github.com/PhonePe/pulse-data#json-structure--syntax) section of the documentation.
 
 ## Documentation ##
 ### Folder Structure ###
 
-Head to the [data](https://github.com/PhonePe/pulse-data/tree/main/data) folder to find below shown structure. Overall, above mentioned two sections data can be found at top level folder structure.
+Head to the [data](https://github.com/PhonePe/pulse-data/tree/main/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
 
 Under each of these sections there are folders for **Transactions** and **Users** respectively.
 
 Data for **Transactions** and **Users** is grouped under country level within **India** folder which further grouped the data into each year(_for country level data_) and there is one folder with name **state** which groups data for all the available states of India respectively. 
 
-Similar to country level data, state level data too grouped into each year. All of these year folders(_both at country and state level_) have maximum of four files with names starting from 1 to 4. These numbers represent each quarter in the selected year. 
+Similar to country level data, state level data too grouped into each year. All of these year folders(_both at country and state level_) have a maximum of four files with names starting from 1 to 4. These numbers represent each quarter in the selected year. 
 
 <ins>Example</ins>: ```2021 > 1.json``` represents data for quarter 1 (_Jan, Feb and Mar 2021_)
 
@@ -163,7 +163,7 @@ For complete details on syntax find the comments in below code
 ```
 #### 2. Top ####
 ##### 2.1 <u>data/top/transaction/country/india/2021/1.json</u> #####
-Top 10 states / districts / pin codes where most number of the transactions are done for a selected year-quarter combination.
+Top 10 states / districts / pin codes where the most number of the transactions happened for a selected year-quarter combination.
 
 For complete details on syntax find the comments in below code
 
@@ -227,7 +227,7 @@ For complete details on syntax find the comments in below code
     "success": true, //Ignore. For internal use only.
     "code": "SUCCESS", //Ignore. For internal use only.
     "data": {
-        "states": [ //List of states where most number of users registered from, for a selected year-quarter combination.
+        "states": [ //List of states where the most number of users registered from, for a selected year-quarter combination.
             {
                 "name": "maharashtra", //State name
                 "registeredUsers": 37077537 //Number of registered users
@@ -235,7 +235,7 @@ For complete details on syntax find the comments in below code
             
             ...,
         ],
-        "districts": [ //List of districts where most number of users registered from, for a selected year-quarter combination.
+        "districts": [ //List of districts where the most number of users registered from, for a selected year-quarter combination.
             {
                 "name": "bengaluru urban", //State name
                 "registeredUsers": 9955387 //Number of registered users
