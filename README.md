@@ -27,7 +27,7 @@ The Indian digital payments story has truly captured the world’s imagination. 
 ## Goal ##
 Our goal is to share this data with everyone (license below), so that you can build your own understanding, insights and visualization on how digital payments have evolved over the years in India.
 ## Guide ##
-This [data](https://github.com/PhonePe/pulse/tree/main/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
+This [data](https://github.com/PhonePe/pulse/tree/master/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
 1. **Top** - Totals of top States / Districts /Pin Codes
 
@@ -36,7 +36,7 @@ All the data provided in these folders is of JSON format. For more details on th
 ## Documentation ##
 ### Folder Structure ###
 
-Head to the [data](https://github.com/PhonePe/pulse/tree/main/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
+Head to the [data](https://github.com/PhonePe/pulse/tree/master/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
 
 Under each of these sections there are folders for **Transactions** and **Users** respectively.
 
@@ -265,4 +265,4 @@ For complete details on syntax find the comments in below code
 
 ## LICENSE ##
 
-[Community Data License Agreement – Permissive – Version 2.0](https://github.com/PhonePe/pulse/blob/main/LICENSE)
+[Community Data License Agreement – Permissive – Version 2.0](https://github.com/PhonePe/pulse/blob/master/LICENSE)
