@@ -16,6 +16,9 @@ The Indian digital payments story has truly captured the world’s imagination. 
             - [Aggregated](#aggregated)
                 - [<u>data/aggregated/transaction/country/india/2018/1.json</u>](#udataaggregatedtransactioncountryindia20181jsonu)
                 - [<u>data/aggregated/user/country/india/2021/1.json</u>](#udataaggregatedusercountryindia20211jsonu)
+            - [Map](#map)
+                - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#udatamaptransactionhovercountryindia20211jsonu)
+                - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#udatamaptransactionhovercountryindia20211jsonu)
             - [Top](#top)
                 - [<u>data/top/transaction/country/india/2021/1.json</u>](#udatatoptransactioncountryindia20211jsonu)
                 - [<u>data/top/user/country/india/2021/1.json</u>](#udatatopusercountryindia20211jsonu)
@@ -29,6 +32,7 @@ Our goal is to share this data with everyone (license below), so that you can bu
 ## Guide ##
 This [data](https://github.com/PhonePe/pulse/tree/master/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
+1. **Map** - Total values at the State and District levels.
 1. **Top** - Totals of top States / Districts /Pin Codes
 
 All the data provided in these folders is of JSON format. For more details on the structure/syntax you can refer to the [JSON Structure / Syntax](https://github.com/PhonePe/pulse#json-structure--syntax) section of the documentation.
@@ -162,8 +166,85 @@ For complete details on syntax find the comments in below code
     "responseTimestamp": 1630346630074 //Ignore. For internal use only.
 }
 ```
-#### 2. Top ####
-##### 2.1 <u>data/top/transaction/country/india/2021/1.json</u> #####
+
+#### 2. Map ####
+##### 2.1 <u>data/map/transaction/hover/country/india/2021/1.json</u> #####
+Total number of transactions and total value of all transactions at the state level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for district level too. Ex: data/map/transaction/hover/country/india/state/delhi/2021/1.json
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "hoverDataList": [ //Internally, this being used to show state/district level data whenever a user hovers on a particular state/district.
+            {
+                "name": "puducherry", //State / district name
+                "metric": [
+                    {
+                        "type": "TOTAL", 
+                        "count": 3309432, //Total number of transactions done within the selected year-quarter for the current state/district.
+                        "amount": 5.899309571743641E9 //Total transaction value within the selected year-quarter for the current state/district.
+                    }
+                ]
+            },
+
+            ...,
+
+            ...,
+
+            {
+                "name": "tamil nadu",
+                "metric": [
+                    {
+                        "type": "TOTAL",
+                        "count": 136556674,
+                        "amount": 2.4866814387365314E11
+                    }
+                ]
+            }            
+        ]
+    },
+    "responseTimestamp": 1630346628834 //Ignore. For internal use only.
+}
+```
+##### 2.2 <u>data/map/transaction/hover/country/india/2021/1.json</u> #####
+Total number of registered users and number of app opens by these registered users at the state level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for district level too. Ex: data/map/user/hover/country/india/state/delhi/2021/1.json
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "hoverData": { //Internally, this being used to show state/district level data whenever a user hovers on a particular state/district.
+            "puducherry": {
+                "registeredUsers": 346279, //Total number of registered users for the selected state/district
+                "appOpens": 7914507 //Total number of app opens by the registered users for the selected state/district
+            },
+
+            ...,
+
+            ...,
+
+            "tamil nadu": {
+                "registeredUsers": 16632608,
+                "appOpens": 348801714
+            }
+        }
+    },
+    "responseTimestamp": 1630346628866 //Ignore. For internal use only.
+}
+```
+
+#### 3. Top ####
+##### 3.1 <u>data/top/transaction/country/india/2021/1.json</u> #####
 Top 10 states / districts / pin codes where the most number of the transactions happened for a selected year-quarter combination.
 
 For complete details on syntax find the comments in below code
@@ -216,7 +297,7 @@ For complete details on syntax find the comments in below code
 }
 ```
 
-##### 2.2 <u>data/top/user/country/india/2021/1.json</u> #####
+##### 3.2 <u>data/top/user/country/india/2021/1.json</u> #####
 Top 10 states / districts / pin codes where most number of users registered from, for a selected year-quarter combination.
 
 For complete details on syntax find the comments in below code
