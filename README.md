@@ -21,7 +21,7 @@ The Indian digital payments story has truly captured the world’s imagination. 
                 - [<u>data/aggregated/user/country/india/2021/1.json</u>](#udataaggregatedusercountryindia20211jsonu)
             - [Map](#map)
                 - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#udatamaptransactionhovercountryindia20211jsonu)
-                - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#udatamaptransactionhovercountryindia20211jsonu)
+                - [<u>data/map/user/hover/country/india/2021/1.json</u>](#udatamapuserhovercountryindia20211jsonu)
             - [Top](#top)
                 - [<u>data/top/transaction/country/india/2021/1.json</u>](#udatatoptransactioncountryindia20211jsonu)
                 - [<u>data/top/user/country/india/2021/1.json</u>](#udatatopusercountryindia20211jsonu)
@@ -214,7 +214,7 @@ For complete details on syntax find the comments in below code
     "responseTimestamp": 1630346628834 //Ignore. For internal use only.
 }
 ```
-##### 2.2 <u>data/map/transaction/hover/country/india/2021/1.json</u> #####
+##### 2.2 <u>data/map/user/hover/country/india/2021/1.json</u> #####
 Total number of registered users and number of app opens by these registered users at the state level.
 
 For complete details on syntax find the comments in below code
