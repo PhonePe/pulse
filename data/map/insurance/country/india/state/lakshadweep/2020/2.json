@@ -1,0 +1,1 @@
+{"success":true,"code":"SUCCESS","data":{"meta":{"dataLevel":"STATE","gridLevel":11,"percentiles":{"10.0":0,"20.0":0,"40.0":0,"80.0":0,"90.0":0,"99.5":0,"50.0":0,"30.0":0,"60.0":0}},"data":{"columns":["lat","lng","metric","label"],"data":[]}},"responseTimestamp":1692610801341}
