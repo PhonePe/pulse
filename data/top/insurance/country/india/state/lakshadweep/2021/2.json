@@ -1,0 +1,1 @@
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"lakshadweep","metric":{"type":"TOTAL","count":5,"amount":6962.0}}],"pincodes":[{"entityName":"682555","metric":{"type":"TOTAL","count":4,"amount":5474.0}},{"entityName":"682551","metric":{"type":"TOTAL","count":1,"amount":1488.0}}]},"responseTimestamp":1692611010262}
