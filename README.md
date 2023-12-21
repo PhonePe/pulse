@@ -16,15 +16,18 @@ The Indian digital payments story has truly captured the world’s imagination. 
     - [Documentation](#documentation)
         - [Folder Structure](#folder-structure)
         - [JSON Structure / Syntax](#json-structure--syntax)
-            - [Aggregated](#aggregated)
-                - [<u>data/aggregated/transaction/country/india/2018/1.json</u>](#udataaggregatedtransactioncountryindia20181jsonu)
-                - [<u>data/aggregated/user/country/india/2021/1.json</u>](#udataaggregatedusercountryindia20211jsonu)
-            - [Map](#map)
-                - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#udatamaptransactionhovercountryindia20211jsonu)
-                - [<u>data/map/user/hover/country/india/2021/1.json</u>](#udatamapuserhovercountryindia20211jsonu)
-            - [Top](#top)
-                - [<u>data/top/transaction/country/india/2021/1.json</u>](#udatatoptransactioncountryindia20211jsonu)
-                - [<u>data/top/user/country/india/2021/1.json</u>](#udatatopusercountryindia20211jsonu)
+            - [Aggregated](#1-aggregated)
+                - [<u>data/aggregated/transaction/country/india/2018/1.json</u>](#11-dataaggregatedtransactioncountryindia20181json)
+                - [<u>data/aggregated/user/country/india/2021/1.json</u>](#12-dataaggregatedusercountryindia20211json)
+                - [<u>data/aggregated/insurance/country/india/2021/1.json</u>](#13-dataaggregatedinsurancecountryindia20211json)
+            - [Map](#2-map)
+                - [<u>data/map/transaction/hover/country/india/2021/1.json</u>](#21-datamaptransactionhovercountryindia20211json)
+                - [<u>data/map/user/hover/country/india/2021/1.json</u>](#22-datamapuserhovercountryindia20211json)
+                - [<u>data/map/insurance/hover/country/india/2021/1.json</u>](#23-datamapinsurancehovercountryindia20211json)
+            - [Top](#3-top)
+                - [<u>data/top/transaction/country/india/2021/1.json</u>](#31-datatoptransactioncountryindia20211json)
+                - [<u>data/top/user/country/india/2021/1.json</u>](#32-datatopusercountryindia20211json)
+                - [<u>data/top/insurance/country/india/2021/1.json</u>](#33-datatopinsurancecountryindia20211json)
     - [FAQs](#faqs)
     - [LICENSE](#license)
 
@@ -33,7 +36,7 @@ The Indian digital payments story has truly captured the world’s imagination. 
 ## Goal ##
 Our goal is to share this data with everyone (license below), so that you can build your own understanding, insights and visualization on how digital payments have evolved over the years in India.
 ## Guide ##
-This [data](https://github.com/PhonePe/pulse/tree/master/data) has been structured to provide details of following two sections with data cuts on **Transactions** and **Users** of PhonePe Pulse - Explore tab.
+This [data](https://github.com/PhonePe/pulse/tree/master/data) has been structured to provide details of following three sections with data cuts on **Transactions**, **Users** and **Insurance** of PhonePe Pulse - Explore tab.
 1. **Aggregated** - Aggregated values of various payment categories as shown under <u>Categories</u> section
 1. **Map** - Total values at the State and District levels.
 1. **Top** - Totals of top States / Districts /Pin Codes
@@ -45,9 +48,9 @@ All the data provided in these folders is of JSON format. For more details on th
 
 Head to the [data](https://github.com/PhonePe/pulse/tree/master/data) folder to the find below shown structure. Overall, above mentioned sections data can be found at top level folder structure.
 
-Under each of these sections there are folders for **Transactions** and **Users** respectively.
+Under each of these sections there are folders for **Transactions**, **Users** and **Insurance** respectively.
 
-Data for **Transactions** and **Users** is grouped under country level within **India** folder which further grouped the data into each year(_for country level data_) and there is one folder with name **state** which groups data for all the available states of India respectively. 
+Data for **Transactions**, **Users** and **Insurance** is grouped under country level within **India** folder which further grouped the data into each year(_for country level data_) and there is one folder with name **state** which groups data for all the available states of India respectively. 
 
 Similar to country level data, state level data too grouped into each year. All of these year folders(_both at country and state level_) have a maximum of four files with names starting from 1 to 4. These numbers represent each quarter in the selected year. 
 
@@ -169,6 +172,36 @@ For complete details on syntax find the comments in below code
     "responseTimestamp": 1630346630074 //Ignore. For internal use only.
 }
 ```
+##### 1.3 <u>data/aggregated/insurance/country/india/2021/1.json</u> #####
+Insurance data at country level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. Ex: <u>data/aggregated/insurance/country/india/state/delhi/2021/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only
+    "code": "SUCCESS", //Ignore. For internal use only
+    "data": {
+        "from": 1609439400000, //Data duration
+        "to": 1616869800000,
+        "transactionData": [
+            {
+                "name": "Insurance", //Type of payment category
+                "paymentInstruments": [
+                    {
+                        "type": "TOTAL",
+                        "count": 318119, //Total number of insurance done for the above duration
+                        "amount": 1.206307024 //Total value
+                    }
+                ]
+            },
+        ]
+    },
+    "responseTimestamp": 1630346628866 //Ignore. For internal use only.
+}
+```
 
 #### 2. Map ####
 ##### 2.1 <u>data/map/transaction/hover/country/india/2021/1.json</u> #####
@@ -243,6 +276,49 @@ For complete details on syntax find the comments in below code
         }
     },
     "responseTimestamp": 1630346628866 //Ignore. For internal use only.
+}
+```
+##### 2.3 <u>data/map/insurance/hover/country/india/2021/1.json</u> #####
+Total number of insurance and total value of all insurance at the state level.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for district level too. Ex: data/map/insurance/hover/country/india/state/delhi/2021/1.json
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "hoverDataList": [ //Internally, this being used to show state/district level data whenever a user hovers on a particular state/district.
+            {
+                "name": "puducherry", //State / district name
+                "metric": [
+                    {
+                        "type": "TOTAL", 
+                        "count": 3309432, //Total number of insurance done within the selected year-quarter for the current state/district.
+                        "amount": 5.899309571743641E9 //Total insurance value within the selected year-quarter for the current state/district.
+                    }
+                ]
+            },
+
+            ...,
+
+            ...,
+
+            {
+                "name": "tamil nadu",
+                "metric": [
+                    {
+                        "type": "TOTAL",
+                        "count": 136556674,
+                        "amount": 2.4866814387365314E11
+                    }
+                ]
+            }            
+        ]
+    },
+    "responseTimestamp": 1630346628834 //Ignore. For internal use only.
 }
 ```
 
@@ -338,6 +414,58 @@ For complete details on syntax find the comments in below code
         ]
     },
     "responseTimestamp": 1630346630074 //Ignore. For internal use only.
+}
+```
+##### 3.3 <u>data/top/insurance/country/india/2021/1.json</u> #####
+Top 10 states / districts / pin codes where the most number of the insurance happened for a selected year-quarter combination.
+
+For complete details on syntax find the comments in below code
+
+**NOTE:** Similar syntax is followed for state level too. The only exception is, it won't have data for states. Ex: <u>data/top/insurance/country/india/state/delhi/2021/1.json</u>
+
+```javascript
+{
+    "success": true, //Ignore. For internal use only.
+    "code": "SUCCESS", //Ignore. For internal use only.
+    "data": {
+        "states": [ //List of states where most number of insurance happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "karnataka", // State name
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 523797492, //Total number of insurance
+                    "amount": 7.549953574123948E11 //Total value of all insurance
+                }
+            },
+            
+            ...,
+        ],
+        "districts": [ //List of districts where most number of insurance happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "bengaluru urban", //District name
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 348712787, //Total number of insurance
+                    "amount": 4.324013412317671E11 //Total value of all insurance
+                }
+            },
+            
+            ...,
+        ],
+        "pincodes": [ //List of pin codes where most number of insurance happened along with total value for a selected year-quarter combination.
+            {
+                "entityName": "560001", //Pin code
+                "metric": {
+                    "type": "TOTAL",
+                    "count": 111898471, //Total number of insurance
+                    "amount": 1.5427512629157785E11 //Total value of all insurance
+                }
+            },
+            
+            ...,
+        ]
+    },
+    "responseTimestamp": 1630346629360 //Ignore. For internal use only.
 }
 ```
 
