@@ -4,7 +4,7 @@ The Indian digital payments story has truly captured the world’s imagination. 
 
 ## Announcements
 
-:star2: Data for Q1(_April, May, June_) of 2024 has been added and is available for consumption.
+:star2: Data for Q2(_April, May, June_) of 2024 has been added and is available for consumption.
 
 ## Table of Contents
 
