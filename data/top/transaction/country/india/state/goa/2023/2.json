@@ -1,0 +1,1 @@
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"north goa district","metric":{"type":"TOTAL","count":15959845,"amount":24636582508.703835}},{"entityName":"south goa district","metric":{"type":"TOTAL","count":10904955,"amount":13978581464.07026}}]},"responseTimestamp":1785259977079}

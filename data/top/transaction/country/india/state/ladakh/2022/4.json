@@ -1,0 +1,1 @@
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"leh ladakh district","metric":{"type":"TOTAL","count":1552664,"amount":3852918537.6922026}},{"entityName":"kargil district","metric":{"type":"TOTAL","count":384024,"amount":804512975.2084752}}]},"responseTimestamp":1785258687846}
