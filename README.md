@@ -48,9 +48,9 @@ boundary will reflect a change in methodology rather than a change in underlying
 
 This repository contains data spanning from Q1 2018 (January - March) through Q2 2026 (April - June).
 
-### Upcoming Release:
+### ~~Upcoming Release:~~ Released:
 
-Expanded district-level data. Please watch this space for updates.
+Expanded district-level data. ~~Please watch this space for updates.~~
 
 <!-- TOC -->
 
