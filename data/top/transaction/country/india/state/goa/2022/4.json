@@ -1,1 +1,1 @@
-{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"north goa district","metric":{"type":"TOTAL","count":13750841,"amount":21148909235.191666}},{"entityName":"south goa district","metric":{"type":"TOTAL","count":9469823,"amount":12353549126.990599}}]},"responseTimestamp":1785258687845}
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"north goa district","metric":{"type":"TOTAL","count":13750841}},{"entityName":"south goa district","metric":{"type":"TOTAL","count":9469823}}]},"responseTimestamp":1785258687845}

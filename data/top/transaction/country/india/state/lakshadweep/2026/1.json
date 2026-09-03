@@ -1,1 +1,1 @@
-{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"lakshadweep district","metric":{"type":"TOTAL","count":351993,"amount":352164967.77212626}}]},"responseTimestamp":1785265841169}
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"lakshadweep district","metric":{"type":"TOTAL","count":351993}}]},"responseTimestamp":1785265841169}

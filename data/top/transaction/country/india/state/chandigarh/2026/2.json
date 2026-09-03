@@ -1,1 +1,1 @@
-{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"chandigarh district","metric":{"type":"TOTAL","count":25137055,"amount":25233291728.692253}}]},"responseTimestamp":1785265816935}
+{"success":true,"code":"SUCCESS","data":{"states":null,"districts":[{"entityName":"chandigarh district","metric":{"type":"TOTAL","count":25137055}}]},"responseTimestamp":1785265816935}
