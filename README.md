@@ -163,7 +163,6 @@ For complete details on syntax find the comments in below code
                     {
                         "type": "TOTAL",
                         "count": 72550406, //Total number of transactions for the above payment category
-                        "amount": 1.4472713558652578E10 //Total value
                     }
                 ]
             },
@@ -287,7 +286,6 @@ For complete details on syntax find the comments in below code
 
             "tamil nadu": {
                 "registeredCount": 16632608,
-                "appOpens": 348801714
             }
         }
     },
@@ -317,7 +315,6 @@ For complete details on syntax find the comments in below code
 
             "tamil nadu": {
                 "registeredCount": 16632608,
-                "appOpens": 348801714
             }
         }
     },
@@ -346,7 +343,6 @@ For complete details on syntax find the comments in below code
                 "metric": {
                     "type": "TOTAL",
                     "count": 523797492, //Total number of transactions
-                    "amount": 7.549953574123948E11 //Total value of all transactions
                 }
             },
 
@@ -358,7 +354,6 @@ For complete details on syntax find the comments in below code
                 "metric": {
                     "type": "TOTAL",
                     "count": 348712787, //Total number of transactions
-                    "amount": 4.324013412317671E11 //Total value of all transactions
                 }
             },
 
